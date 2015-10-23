@@ -1,4 +1,4 @@
-.navbar.navbar-default.navbar-fixed-top
+.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
       button.navbar-toggle type="button" data-toggle="collapse" data-target="#navbar"
@@ -12,6 +12,24 @@
         li = link_to "signup"
 .container
   .col-md-12
-    .col-md-6
-    .col-md-6
+    .col-md-8
+      
+    .col-md-4
+      .panel.panel-success
+        .panel-heading
+          p signup
+        .panel-body
+          =form_for :asd do |f|
+            .form-group
+              =f.label "Full Name"
+              =f.text_field :username, :class=>"form-control"
+            .form-group
+              =f.label "Email"
+              =f.text_field :username, :class=>"form-control"
+            .form-group
+              =f.label "Password"
+              =f.text_field :username, :class=>"form-control"
+            .form-group
+              =f.submit("Submit", :class=>"btn btn-primary") 
+          end
     .panel
